@@ -1,4 +1,4 @@
-package lotto.domain;
+package lotto.domain.rank;
 
 public enum Rank {
     FIVE_PRICE(3, 0, 5_000L),
@@ -9,11 +9,11 @@ public enum Rank {
 
     private final int matchCount;
     private final int bonusCount;
-    private final long winningPrice;
-    Rank(int matchCount, int bonusCount, long winningPrice) {
+    private final long winningMoney;
+    Rank(int matchCount, int bonusCount, long winningMoney) {
         this.matchCount = matchCount;
         this.bonusCount = bonusCount;
-        this.winningPrice = winningPrice;
+        this.winningMoney = winningMoney;
     }
 
     public static Rank getRank(int matchCount, int bonusCount) {
@@ -25,8 +25,8 @@ public enum Rank {
         throw new IllegalArgumentException();
     }
 
-    public long getWinningPrice() {
-        return winningPrice;
+    public long getWinningMoney() {
+        return winningMoney;
     }
 
 
